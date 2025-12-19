@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 :root{
@@ -37,7 +38,6 @@
 body{
     background:white;
     font-size: 1.2rem;
-
     display: grid;
     color: var(--color-font-main);
 }
@@ -68,7 +68,7 @@ body{
     position: sticky;
     animation: header linear both;
     animation-timeline: scroll(root);
-    animation-range: 0 100px;
+    animation-range:0 200px;
 }
 
 
@@ -78,11 +78,12 @@ body{
         backdrop-filter: blur(5px);
         box-shadow: 0 0 10px white;
         font-size: 1.5rem;
-        height: 80px;
+        height: 100px;
     }
 }
 .header-logo{
     padding: 1rem;
+    width: 100%;
 }
 a, li{
     text-decoration: none;
@@ -103,8 +104,9 @@ a, li{
 }
 .login{
     padding: 1rem;
-    width: 100%;
+    width: 30rem;
     display: flex;
+    justify-content: center;
     gap: 15px;
     align-items: center;
 }
@@ -349,8 +351,15 @@ a, li{
     width: 100%;
     object-fit: contain;
 }
+.products-logo-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .products-logo-img img{
     width: 100%;
+    min-width: 80px;
+    max-width: 300px;
     object-fit: contain;
 }
 .products-logo-img-text{
@@ -453,4 +462,54 @@ input:focus{
         font-size: .8rem;
         width: 5rem;
     }
+    .home-cta{
+        grid-template-areas: "title"
+        "img"
+        "dot";
+    }
+    .service-manage-img{
+        flex-direction: column;
+        gap: 2rem;
+
+    }
+    .manage-img:hover{
+        transform: translateY(-1rem);
+    }
+    .feature{
+        flex-direction: column;
+        margin-top:2rem ;
+    }
+    .feature-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .products-members{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .products-pana{
+        flex-direction: column;
+    }
+    .products-pana-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .products-logo{
+        flex-direction: column;
+    }
+    .testimonial-imgs{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .testimonial-imgs{
+        display: flex;
+        
+    };
+    .footer-info{
+        display: none;
+    }
+
 }
